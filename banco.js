@@ -1,0 +1,91 @@
+const livros = [
+    {
+        titulo: "Harry Potter e a Pedra Filosofal",
+        autor: "J.K. Rowling",
+        ano: 1997,
+        paginas: 223,
+        sinopse: "Harry Potter é um garoto órfão que vive infeliz com seus tios. No seu aniversário de 11 anos, ele descobre que é um bruxo e é convidado a estudar na Escola de Magia e Bruxaria de Hogwarts.",
+        preco: 44.90
+    },
+    {
+        titulo: "O Senhor dos Anéis: A Sociedade do Anel",
+        autor: "J.R.R. Tolkien",
+        ano: 1954,
+        paginas: 576,
+        sinopse: "Em uma terra fantástica, um jovem hobbit recebe a missão de destruir um anel mágico de imenso poder para evitar que o senhor sombrio escravize o mundo.",
+        preco: 59.90
+    },
+    {
+        titulo: "O Hobbit",
+        autor: "J.R.R. Tolkien",
+        ano: 1937,
+        paginas: 310,
+        sinopse: "Bilbo Bolseiro é um hobbit que vive uma vida tranquila até ser arrastado por um mago e um grupo de anões em uma jornada para recuperar um tesouro guardado por um dragão.",
+        preco: 39.90
+    },
+    {
+        titulo: "Duna",
+        autor: "Frank Herbert",
+        ano: 1965,
+        paginas: 680,
+        sinopse: "Em um futuro distante, famílias nobres lutam pelo controle de Arrakis, um planeta desértico que é a única fonte da substância mais valiosa do universo.",
+        preco: 64.90
+    },
+    {
+        titulo: "1984",
+        autor: "George Orwell",
+        ano: 1949,
+        paginas: 336,
+        sinopse: "Uma distopia sobre um estado totalitário onde o 'Grande Irmão' tudo vê e o pensamento livre é considerado um crime punível com a morte.",
+        preco: 35.00
+    },
+    {
+        titulo: "Neuromancer",
+        autor: "William Gibson",
+        ano: 1984,
+        paginas: 320,
+        sinopse: "Um hacker decadente é contratado para um último trabalho: invadir uma inteligência artificial poderosa no ciberespaço.",
+        preco: 49.90
+    },
+    {
+        titulo: "O Guia do Mochileiro das Galáxias",
+        autor: "Douglas Adams",
+        ano: 1979,
+        paginas: 208,
+        sinopse: "Segundos antes da Terra ser destruída, Arthur Dent é salvo por seu amigo e começa uma viagem hilária pelo espaço carregando apenas uma toalha e um guia eletrônico.",
+        preco: 29.90
+    },
+    {
+        titulo: "Crônicas de Nárnia: O Leão, a Feiticeira e o Guarda-Roupa",
+        autor: "C.S. Lewis",
+        ano: 1950,
+        paginas: 184,
+        sinopse: "Quatro irmãos descobrem um mundo mágico escondido dentro de um guarda-roupa, onde devem ajudar um grande leão a derrotar uma bruxa eterna.",
+        preco: 42.00
+    },
+    {
+        titulo: "O Nome do Vento",
+        autor: "Patrick Rothfuss",
+        ano: 2007,
+        paginas: 656,
+        sinopse: "A história de Kvothe, um homem lendário que desapareceu da vista do público e agora narra sua trajetória desde a infância em uma trupe de teatro até a universidade de magia.",
+        preco: 55.00
+    },
+    {
+        titulo: "Fundação",
+        autor: "Isaac Asimov",
+        ano: 1951,
+        paginas: 240,
+        sinopse: "O matemático Hari Seldon prevê a queda do Império Galáctico e cria a Fundação para preservar o conhecimento humano e acelerar o surgimento de um novo império.",
+        preco: 47.90
+    }
+];
+const livrosJSON = JSON.stringify(livros)
+
+function criaArquivo(obj){
+    const dadosJSON = JSON.stringify(obj)
+    const fs = require("fs")
+    fs.writeFileSync("alunos.json", dadosJSON)
+}
+
+criaArquivo(alunos)
