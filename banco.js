@@ -88,4 +88,25 @@ function criaArquivo(obj){
     fs.writeFileSync("alunos.json", dadosJSON)
 }
 
-criaArquivo(alunos)
+criaArquivo(livros)
+
+
+function mostrarLivros(lista){
+    console.log("##### ESTOQUE DE LIVROS #####")
+    lista.forEach((livro) => {
+        console.log(livro.titulo + " - " + 
+                    livro.autor + " Ano:" + 
+                    livro.ano + " Páginas:" +
+                    livro.paginas + " Preço: R$ "+
+                    livro.preco.toFixed(2).replaceAll(".",","))
+    })
+}
+mostrarLivros(livros)
+
+let livrosFiltrados = livros.filter((livro) => livro.preco > 50)
+mostrarLivros(livrosFiltrados)
+
+let livrosDesconto = livros.map((livro) => {
+    return {...livro, preco: livro.preco * 0.9}
+})
+mostrarLivros(livrosDesconto)
